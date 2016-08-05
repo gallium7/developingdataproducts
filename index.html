@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CO2 Uptake by Plants</title>
+  <meta charset="utf-8">
+  <meta name="description" content="CO2 Uptake by Plants">
+  <meta name="author" content="Gary Schurr">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>CO2 Uptake by Plants</h1>
+    <h2>With a twist</h2>
+    <p>Gary Schurr<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>CO2 data</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>The widget I have created uses the CO2 data. Here are the first few rows of the dataset:</h3>
+
+<pre><code class="r">        data(CO2)
+        head(CO2, n=4)
+</code></pre>
+
+<pre><code>##   Plant   Type  Treatment conc uptake
+## 1   Qn1 Quebec nonchilled   95   16.0
+## 2   Qn1 Quebec nonchilled  175   30.4
+## 3   Qn1 Quebec nonchilled  250   34.8
+## 4   Qn1 Quebec nonchilled  350   37.2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Interactive Elements</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The widget has two interactive elements:</p>
+
+<ol>
+<li>a slider bar that is used as a multiplier in this equation: uptake * (1 + multiplier * rnorm(1))</li>
+<li>a slider bar that can be used to adjust the confidence interval of the geom_smooth() lines. Note that the default is 0.95</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Screenshot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/screenshot.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>It&#39;s actually pretty useless!</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Each time you change a slider the random numbers are regenerated.</li>
+<li>Not that useful anyway!</li>
+</ul>
+
+<h3>Does anybody have any questions?</h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='CO2 data'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Interactive Elements'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Screenshot'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='It&#39;s actually pretty useless!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
